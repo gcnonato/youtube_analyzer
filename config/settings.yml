@@ -1,0 +1,11 @@
+defaults: &defaults
+  google_translate_key: <%= ENV['GOOGLE_TRANSLATE_KEY'] %>
+  youtube_analytics_client_id: <%= ENV['YOUTUBE_ANALYTICS_CLIENT_ID'] %>
+  youtube_analytics_client_secret: <%= ENV['YOUTUBE_ANALYTICS_CLIENT_SECRET'] %>
+
+development:
+  <<: *defaults
+test:
+  <<: *defaults
+production:
+  <<: *defaults

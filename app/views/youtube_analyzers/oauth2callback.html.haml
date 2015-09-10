@@ -1,0 +1,21 @@
+%h2 Youtube Analyzers CallbackPage
+
+/%p=@res.body
+/%p=@js_res['access_token']
+%table.table
+  %tr
+    %th date
+    %th views
+    %th comments
+    %th favoritesAdded
+    %th likes
+    %th dislikes
+    %th estimatedMinutesWatched
+    %th averageViewDuration
+  - @response['rows'].each do |row|
+    %tr
+      - row.each do |v|
+        %td= v
+
+%br
+=link_to 'top', root_path
