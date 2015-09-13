@@ -6,4 +6,5 @@ YoutubeAnalyzer::Application.routes.draw do
     get :oauth2callback, :on => :collection
   end
 
+  resources :youtube_analitics_graphs, only: %i(index)
 end
