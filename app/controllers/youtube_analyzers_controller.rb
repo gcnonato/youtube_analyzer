@@ -39,7 +39,7 @@ class YoutubeAnalyzersController < ApplicationController
     puts auth
 
     # 動画単位の集計（上位10件）
-    get_path = "/youtube/analytics/v1/reports?ids=channel==#{CHANNEL_ID}&start-date=#{START_DATE}&end-date=#{END_DATE}&metrics=#{METRICS}&dimensions=day&sort=-day"
+    get_path = "/youtube/analytics/v1/reports?ids=channel==#{CHANNEL_ID}&start-date=#{START_DATE}&end-date=#{END_DATE}&metrics=#{METRICS}&dimensions=video&max-results=10&sort=-views"
     # 日単位の集計
     #get_path = "/youtube/analytics/v1/reports?ids=channel==#{CHANNEL_ID}&start-date=#{START_DATE}&end-date=#{END_DATE}&metrics=#{METRICS}&dimensions=day&sort=day"
     ht = Net::HTTP.new(get_uri.host, get_uri.port)

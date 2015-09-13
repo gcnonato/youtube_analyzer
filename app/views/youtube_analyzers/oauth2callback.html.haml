@@ -5,11 +5,12 @@
   %h2 Youtube Analyzers CallbackPage
   .row
     .col-xs-12
-      - views_data = @response['rows'].map {|row| [row[0], row[1]]}
-      - estimatedMinutesWatched_data = @response['rows'].map {|row| [row[0], row[6]]}
-      - averageViewDuration_data = @response['rows'].map {|row| [row[0], row[7]]}
-      - averageViewPercentage_data = @response['rows'].map {|row| [row[0], row[8]]}
-      = line_chart [ { name: 'views', data: views_data }, { name: 'estimatedMinutesWatched', data: estimatedMinutesWatched_data }, { name: 'averageViewDuration', data: averageViewDuration_data }, { name: 'averageViewPercentage', data: averageViewPercentage_data } ]
+      / - views_data = @response['rows'].map {|row| [row[0], row[1]]}
+      / - estimatedMinutesWatched_data = @response['rows'].map {|row| [row[0], row[6]]}
+      / - averageViewDuration_data = @response['rows'].map {|row| [row[0], row[7]]}
+      / - averageViewPercentage_data = @response['rows'].map {|row| [row[0], row[8]]}
+      / = line_chart [ { name: 'views', data: views_data }, { name: 'estimatedMinutesWatched', data: estimatedMinutesWatched_data }, { name: 'averageViewDuration', data: averageViewDuration_data }, { name: 'averageViewPercentage', data: averageViewPercentage_data } ]
+      = bar_chart @response['rows']
 /%p=@res.body
 /%p=@js_res['access_token']
 %table.table
