@@ -1,4 +1,11 @@
-%h2 Youtube Analyzers CallbackPage
+- content_for :custom_js do
+  = javascript_include_tag '//www.google.com/jsapi', 'chartkick'
+
+.contener
+  %h2 Youtube Analyzers CallbackPage
+  .row
+    .col-xs-12
+      = line_chart @response['rows']
 
 /%p=@res.body
 /%p=@js_res['access_token']
