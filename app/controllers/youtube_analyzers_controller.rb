@@ -11,7 +11,7 @@ class YoutubeAnalyzersController < ApplicationController
   GET_TARGET    = 'https://www.googleapis.com/youtube/analytics/v1/reports'
   #CHANNEL_ID    = 'UClll215OOauqh91v2n-v5hA'
   CHANNEL_ID    = 'UCDLe_iX8dWkR8U_bvajGD8Q'
-  METRICS       = 'views,comments,favoritesAdded,likes,dislikes,estimatedMinutesWatched,averageViewDuration'
+  METRICS       = 'views,comments,favoritesAdded,likes,dislikes,estimatedMinutesWatched,averageViewDuration,averageViewPercentage'
   START_DATE    = '2015-04-01'
   END_DATE      = '2015-12-31'
 
