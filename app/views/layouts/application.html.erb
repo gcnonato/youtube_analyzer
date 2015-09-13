@@ -7,6 +7,9 @@
   <%= stylesheet_link_tag    "//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cerulean/bootstrap.min.css" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" %>
+  <% if content_for? :custom_js %>
+    <%= content_for :custom_js %>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
