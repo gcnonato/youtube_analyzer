@@ -11,14 +11,8 @@
 /%p=@js_res['access_token']
 %table.table
   %tr
-    %th date
-    %th views
-    %th comments
-    %th favoritesAdded
-    %th likes
-    %th dislikes
-    %th estimatedMinutesWatched
-    %th averageViewDuration
+    - @response['columnHeaders'].each do |header|
+      %th= header['name']
   - @response['rows'].each do |row|
     %tr
       - row.each do |v|
