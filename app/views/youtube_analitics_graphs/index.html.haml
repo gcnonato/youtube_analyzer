@@ -1,5 +1,8 @@
 - content_for :custom_js do
   = javascript_include_tag '//www.google.com/jsapi', 'chartkick'
 
-%h1 YoutubeAnaliticsGraphs#index
-%p Find me in app/views/youtube_analitics_graphs/index.html.haml
+.contener
+  %h1 YoutubeAnaliticsGraphs#index
+  .row
+    .col-xs-12
+      = line_chart @chart_data
