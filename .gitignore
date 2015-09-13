@@ -2,7 +2,6 @@
 /db/*.sqlite3
 /log/*.log
 /tmp
-/db/schema.rb
 /log/*.log
 *.swp
 .DS_Store
